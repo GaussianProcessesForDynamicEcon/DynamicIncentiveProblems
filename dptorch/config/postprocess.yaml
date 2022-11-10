@@ -1,0 +1,8 @@
+hydra: 
+  run:
+    dir: postprocess/${RUN_DIR}
+defaults:
+  - model: AS_unconstrained
+seed: 0
+RUN_DIR: APS_nocharge/2022-01-18/20-13-13
+CHECKPOINT_FILE: LATEST

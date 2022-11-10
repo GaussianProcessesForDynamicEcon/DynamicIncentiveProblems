@@ -1,0 +1,6 @@
+name: Rprop
+config:
+  lr: 0.001 # will be scaled by number of points
+iter_per_cycle: 10000
+relative_training_error: 1e-5
+# minibatch_size: 10

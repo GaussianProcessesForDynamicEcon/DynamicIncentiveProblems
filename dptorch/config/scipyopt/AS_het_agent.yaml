@@ -1,0 +1,5 @@
+tol: 1e-5 #tolerance for VFI
+method: 'SLSQP' #method for VFI
+no_restarts: 10 #no of restarts for global opt in VFI
+tol_gpopt: 1e-5 #tolerance for finding max of GP
+method_gpopt: 'L-BFGS-B' #method for finding max of GP

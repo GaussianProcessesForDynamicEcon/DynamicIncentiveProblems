@@ -1,0 +1,4 @@
+name: SpectralMixtureKernel
+config: 
+  num_mixtures: 20
+  ard_num_dims: 2

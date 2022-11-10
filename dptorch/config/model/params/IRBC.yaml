@@ -1,0 +1,34 @@
+# Risk aversion
+gamma: 1.0
+# Discount factor
+beta: 0.99
+# Capital share of income
+alpha: 0.36
+# Depreciation rate
+delta: 0.01
+# Persistence of TFP shocks
+rhoZ: 0.95
+# Standard deviation of TFP shocks
+sigE: 0.01
+# Intensity of capital adjustment costs
+phi: 0.5
+# Steady state for capital
+k_ss: 1.0
+
+# Type of numerical integration: 'MC' or 'monomial'
+typeInt: 'monomial'
+# Monte Carlo simulation sample size
+MC_N: 10
+
+# Number of countries
+nCountries: 2
+
+# Lower bound for capital
+kMin: 0.8
+# Upper bound for capital
+kMax: 1.2
+# Lower bound for lambda
+lMin: 0.2
+# Upper bound for lambda
+lMax: 5
+

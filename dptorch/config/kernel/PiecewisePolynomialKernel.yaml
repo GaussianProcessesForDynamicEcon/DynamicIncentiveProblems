@@ -1,0 +1,5 @@
+name: PiecewisePolynomialKernel
+config:
+    q: 0
+    ard_num_dims: 2
+    eps: 1e-7

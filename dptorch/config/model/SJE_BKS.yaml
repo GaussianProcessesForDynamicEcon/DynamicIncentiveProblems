@@ -1,0 +1,10 @@
+MODEL_NAME: SJE_BKS
+defaults:
+  - params: SJE_BKS
+GP_MODEL: 
+  name: DeepKernel
+  config:
+    active_dim: 2
+EXPECT_OP: 
+  name: SinglePoint
+ONLY_POLICY_ITER: true

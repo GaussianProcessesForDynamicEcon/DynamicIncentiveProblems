@@ -1,0 +1,58 @@
+hydra: 
+  run:
+    dir: runs/${model.MODEL_NAME}/model  #2022-03-22/13-15-31 #${now:%Y-%m-%d}/${now:%H-%M-%S}
+  verbose: false
+defaults:
+  - gpytorch: IRBC #AS_fin_state #cont
+  - ipopt: default #AS_fin_state #cont
+  - scipyopt: default #AS_het_agent
+  - model: IRBC # AS_het_agent #AS_het_agent #AS_golosov_para #AS_unconstrained #AS_constrained_split #cont_vanilla
+  - torch_optim: IRBC #adam #Rprob
+  - kernel: RBFKernel #PiecewisePolynomialKernel
+# can be NEW, LATEST, or a given checkpoint filename
+STARTING_POINT: NEW #Iter_224.pth #/home/phrenner/Research/APS_GP/dptorch/runs/APS_with/model/Iter_456.pth
+CHECKPOINT_INTERVAL: 1
+WORKER_MAIN_LOG_LEVEL: ERROR
+WORKER_TRAIN_LOG_LEVEL: INFO
+DISABLE_POLICY_FIT: false
+# behaviour
+# Resample method: disabled, random or dynamic
+resample_method: random
+resample_num_new: 3000
+drop_non_converged: false
+non_converged_accepted_ratio: 0.2
+convergence_check_index: 2
+override_checkpoint_configs_optimizer: false
+use_fixed_noise: false
+force_cpu: true
+init_with_zeros: false # should the VF be initialized with zeros?
+no_samples: 20
+num_cycles: 200
+seed: 0 
+BAL:
+  enabled: true
+  points_per_iter: 5
+  epoch_freq: 1
+  max_points: -1
+  targets:
+  - policy: 0 # best across discrete states
+    rho: 0.0
+    beta: 1.0
+  - discrete_state: 0
+    policy: 1
+    rho: 0.0
+    beta: 1.0 
+# BAL:
+#   enabled: true
+#   points_per_iter: 1
+#   epoch_freq: 5
+#   max_points: 7000
+#   targets:
+#   - policy: 0
+#     rho: 1.0
+#     beta: 10.0
+#     discrete_state: 0
+#   - policy: 0
+#     rho: 1.0
+#     beta: 10.0
+#     discrete_state: 1

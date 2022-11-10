@@ -1,0 +1,9 @@
+MODEL_NAME: StochasticOptimalGrowthModel
+defaults:
+  - params: SOGM
+GP_MODEL: 
+  name: ASGPModel
+  config:
+    active_dim: 2
+EXPECT_OP: 
+  name: SinglePoint

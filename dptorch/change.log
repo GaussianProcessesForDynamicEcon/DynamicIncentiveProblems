@@ -1,0 +1,16 @@
+- added feasible and feasible_all vectors that are 1 if feasible and 0 otherwise; optimization is disabled on infeasible points to save computation and values are set to zero:
+     in scatter_sample; sample_all; sample; allgather; is_feasible; solve_all; save; BAL; load;
+- added bal_utility function for self customization added
+   BAL; bal_utility_func
+- added post_process_optimization function that adjusts outputs of optimizer for better interpolation
+    solve_all
+- added process_training_data function that allows changing of values right before interpolation; necessary for multiple states that interconnect (interpolation on max(V_1,V_2)) where V_1 and V_2 are in different states:
+     process_training_data; allgather
+- can now set number of  random samples indpendent of initial sample:
+    sample_all; sample
+- in save: the post processing instructions gave an error if path was not date/time format
+- in run_dpgp: added condition that lr will not be overwritten if setting in config is false
+- in init: added fixed noise likelihood function with options in config and adapted solver output in gp_train to accomodate noise vectors
+- removed pytorch-lbfgs option since torch has lbfgs already implemented; changes in create_optimizer and gp_train
+- now also outputs interpolation error and saves initial value function (in iterate())
+- non converged pts need to be treated as feasible to avoid issues (in solve_all)

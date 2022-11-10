@@ -1,0 +1,4 @@
+name: MaternKernel
+config:
+    nu: 0.5
+    ard_num_dims: 2

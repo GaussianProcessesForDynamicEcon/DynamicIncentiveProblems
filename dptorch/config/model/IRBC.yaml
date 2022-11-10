@@ -1,0 +1,10 @@
+MODEL_NAME: IRBC
+defaults:
+  - params: IRBC
+GP_MODEL: 
+  name: ExactGPModel
+  #config:
+  #  active_dim: 2
+EXPECT_OP: 
+  name: SinglePoint
+ONLY_POLICY_ITER: true

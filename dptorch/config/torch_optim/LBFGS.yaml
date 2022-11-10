@@ -1,0 +1,6 @@
+name: LBFGS
+config:
+  lr: 0.001 # will be scaled by number of points
+  line_search_fn: 'strong_wolfe'
+iter_per_cycle: 50
+relative_training_error: 1e-5

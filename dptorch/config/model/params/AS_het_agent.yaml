@@ -1,0 +1,13 @@
+n_agents: 2
+n_shocks: 2
+beta: 0.90
+upperb: 1.
+lowerb: 0.
+upperh: 0.35
+lowerh: 0.1
+sigma: 0.5
+reg_c: 0.0001
+pen_opt_vf: 10. #used in optimization
+pen_vf: 10.  #truly added 
+pen_opt_barrier: 0.   #0.01
+pen_barrier: 0.

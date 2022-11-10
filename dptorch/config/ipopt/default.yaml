@@ -1,0 +1,6 @@
+tol: 1e-4
+acceptable_tol: 0.0005
+max_cpu_time: 1800.0
+print_level: 1
+hessian_approximation: exact
+derivative_test: null # second-order

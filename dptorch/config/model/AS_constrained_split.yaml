@@ -1,0 +1,9 @@
+MODEL_NAME: AS_constrained_split
+defaults:
+  - params: AS_constrained_split
+GP_MODEL: 
+  name: ExactGPModel
+  config:
+    active_dim: 2
+EXPECT_OP: 
+  name: SinglePoint

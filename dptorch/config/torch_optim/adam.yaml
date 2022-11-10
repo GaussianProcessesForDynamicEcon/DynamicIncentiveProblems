@@ -1,0 +1,6 @@
+name: Adam
+config:
+  lr: 0.01 # will be scaled by number of points
+iter_per_cycle: 5000
+relative_training_error: 1e-5
+# minibatch_size: 10

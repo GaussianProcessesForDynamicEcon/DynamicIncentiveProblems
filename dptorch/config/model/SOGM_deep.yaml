@@ -1,0 +1,14 @@
+MODEL_NAME: StochasticOptimalGrowthModel
+defaults:
+  - params: SOGM
+GP_MODEL: 
+  name: DeepKernel
+  config:
+    active_dim: 2
+EXPECT_OP: 
+  name: Monomial
+  config:
+    sigma: 0.1
+params:
+  n_agents: 10
+  discrete_state_dim: 5

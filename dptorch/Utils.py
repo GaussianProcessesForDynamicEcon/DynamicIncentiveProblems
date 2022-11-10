@@ -1,0 +1,2 @@
+class NonConvergedError(Exception):
+    pass

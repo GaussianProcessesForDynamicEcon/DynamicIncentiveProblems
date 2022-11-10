@@ -1,0 +1,9 @@
+MODEL_NAME: AS_constrained
+defaults:
+  - params: AS_constrained
+GP_MODEL: 
+  name: ExactGPModel
+  config:
+    active_dim: 2
+EXPECT_OP: 
+  name: SinglePoint

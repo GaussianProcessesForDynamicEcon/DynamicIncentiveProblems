@@ -1,0 +1,18 @@
+n_agents: 10
+beta: 0.8
+rho: 0.95
+zeta: 0.5
+psi: 0.36
+gamma: 2.0
+delta: 0.025
+eta: 1
+# Ranges For States
+k_bar: 0.2
+k_up: 3.0
+# Ranges for Controls
+c_bar: 1e-2
+c_up: 10.0
+l_bar: 1e-2
+l_up: 10.0
+inv_bar: 1e-2
+inv_up: 10.0

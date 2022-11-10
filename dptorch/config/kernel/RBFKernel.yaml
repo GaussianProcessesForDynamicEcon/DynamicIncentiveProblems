@@ -1,0 +1,4 @@
+name: RBFKernel
+config:
+   ard_num_dims: 2
+   eps: 1e-10

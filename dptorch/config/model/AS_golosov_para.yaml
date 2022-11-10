@@ -1,0 +1,9 @@
+MODEL_NAME: AS_golosov_para
+defaults:
+  - params: AS_unconstrained
+GP_MODEL: 
+  name:  ExactGPModel #ASGPModel #SpectralMixtureModel #ExactGPModel #DeepKernel
+  config:
+    active_dim: 2
+EXPECT_OP: 
+  name: SinglePoint

@@ -1,0 +1,9 @@
+tol: 1e-3
+acceptable_tol: 0.01
+max_cpu_time: 90.0
+max_iterations: 200
+constr_viol_tol: 1e-7
+no_restarts: 10
+print_level: 0
+hessian_approximation: exact
+derivative_test: null # second-order
