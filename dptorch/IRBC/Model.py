@@ -121,7 +121,7 @@ def a_tp1s_weights_monomial(nCountries, nShocks, a_t, rhoZ, sigma, aMin, aMax):
 
 
 # ======================================================================
-class SpecifiedModel(DPGPScipyModel):
+class SpecifiedModel(DPGPIpoptModel):
     def __init__(self, cfg={}, **kwargs):
         self.no_samples = cfg["no_samples"]
         self.nCountries = cfg["model"]["params"]["nCountries"]
