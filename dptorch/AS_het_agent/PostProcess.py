@@ -278,7 +278,7 @@ def compare(m1, m2, cfg):
 def simulate(m, m_prev, cfg, model):
 
     optimize = False
-    n_sim_steps = 10
+    n_sim_steps = 1000
     n_agents = m.cfg["model"]["params"]["n_agents"]
     n_types = m.cfg["model"]["params"]["n_types"]
     trans_mat = m.cfg["model"]["params"]["trans_mat"]

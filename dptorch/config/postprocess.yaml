@@ -4,5 +4,5 @@ hydra:
 defaults:
   - model: AS_unconstrained
 seed: 0
-RUN_DIR: APS_nocharge/2022-01-18/20-13-13
+RUN_DIR: APS_nocharge/dummy
 CHECKPOINT_FILE: LATEST

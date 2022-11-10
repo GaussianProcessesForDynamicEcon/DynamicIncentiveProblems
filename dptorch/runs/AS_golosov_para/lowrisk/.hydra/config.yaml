@@ -1,0 +1,88 @@
+gpytorch:
+  likelihood_noise_feas: 1.0e-06
+  likelihood_noise_infeas: 0.001
+  likelihood_noise_lb: 1.0e-09
+ipopt:
+  tol: 0.001
+  acceptable_tol: 0.01
+  max_cpu_time: 90.0
+  max_iterations: 200
+  constr_viol_tol: 1.0e-07
+  no_restarts: 10
+  print_level: 0
+  hessian_approximation: exact
+  derivative_test: null
+scipyopt:
+  tol: 1.0e-06
+  method: SLSQP
+  no_restarts: 10
+  tol_gpopt: 1.0e-06
+  method_gpopt: L-BFGS-B
+model:
+  params:
+    n_agents: 2
+    beta: 0.9
+    upperb: 1.0
+    lowerb: 0.0
+    upperh: 0.35
+    lowerh: 0.1
+    sigma: 0.5
+    reg_c: 0.0001
+    pen_opt_vf: 10.0
+    pen_vf: 10.0
+    pen_opt_barrier: 0.0
+    pen_barrier: 0.0
+    Pi_1_1: 0.9
+    Pi_1_2: 0.1
+    Pi_2_1: 0.06666666666
+    Pi_2_2: 0.93333333333
+  MODEL_NAME: AS_golosov_para
+  GP_MODEL:
+    name: ExactGPModel
+    config:
+      active_dim: 2
+  EXPECT_OP:
+    name: SinglePoint
+torch_optim:
+  name: LBFGS
+  config:
+    lr: 0.001
+    line_search_fn: strong_wolfe
+  iter_per_cycle: 50
+  relative_training_error: 1.0e-05
+kernel:
+  name: PiecewisePolynomialKernel
+  config:
+    q: 1
+    ard_num_dims: 2
+    eps: 1.0e-07
+STARTING_POINT: NEW
+CHECKPOINT_INTERVAL: 1
+WORKER_MAIN_LOG_LEVEL: ERROR
+WORKER_TRAIN_LOG_LEVEL: INFO
+DISABLE_POLICY_FIT: false
+resample_method: random
+resample_num_new: 3000
+drop_non_converged: false
+non_converged_accepted_ratio: 0.2
+override_checkpoint_configs_optimizer: false
+use_fixed_noise: false
+force_cpu: true
+init_with_zeros: false
+no_samples: 128
+num_cycles: 9000
+seed: 0
+BAL:
+  enabled: true
+  points_per_iter: 1
+  epoch_freq: 5
+  max_points: 7000
+  targets:
+  - policy: 0
+    rho: 1.0
+    beta: 10.0
+    discrete_state: 0
+  - policy: 0
+    rho: 1.0
+    beta: 10.0
+    discrete_state: 1
