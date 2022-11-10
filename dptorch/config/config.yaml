@@ -5,12 +5,12 @@ hydra:
 defaults:
   - gpytorch: AS_fin_state #cont
   - ipopt: AS_fin_state #cont
-  - scipyopt: AS_het_agent
-  - model: AS_het_agent #AS_het_agent #AS_golosov_para #AS_unconstrained #AS_constrained_split #cont_vanilla
+  - scipyopt: default
+  - model: AS_highrisk #AS_het_agent #AS_golosov_para #AS_unconstrained #AS_constrained_split #cont_vanilla
   - torch_optim: LBFGS #adam #Rprob
   - kernel: PiecewisePolynomialKernel
 # can be NEW, LATEST, or a given checkpoint filename
-STARTING_POINT: NEW #Iter_59.pth #/home/phrenner/Research/APS_GP/dptorch/runs/APS_with/model/Iter_456.pth
+STARTING_POINT: NEW #Iter_XXX.pth
 CHECKPOINT_INTERVAL: 1
 WORKER_MAIN_LOG_LEVEL: ERROR
 WORKER_TRAIN_LOG_LEVEL: INFO
@@ -25,13 +25,13 @@ override_checkpoint_configs_optimizer: false
 use_fixed_noise: false
 force_cpu: true
 init_with_zeros: false # should the VF be initialized with zeros?
-no_samples: 512
+no_samples: 128
 num_cycles: 9000
 seed: 0  
 BAL:
   enabled: true
   points_per_iter: 1
-  epoch_freq: 3
+  epoch_freq: 5
   max_points: 7000
   targets:
   - policy: 0
