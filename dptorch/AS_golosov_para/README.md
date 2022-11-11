@@ -1,10 +1,9 @@
 ## How to run the Fernandes and Phelan (2000) benchmark model
 To start the computation from scratch:
 - In config/kernel/PiecewisePolynomialKernel.yaml set q:1
-- In config/model/AS_golosov_para.yaml  set params: AS_highrisk
 - In config/config.yaml set
   - scipyopt: default
-  - model: AS_golosov_para
+  - model: AS_highrisk
   - STARTING_POINT: NEW
   - no_samples: 128
 
