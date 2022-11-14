@@ -1,5 +1,9 @@
 # Machine Learning for Dynamic Incentive Problems
 
+<p align="center">
+<img src="screens/feas-set.png" width="600px"/>
+</p>
+
 This Python-based code repository supplements the work of [Philipp Renner](https://www.lancaster.ac.uk/lums/people/philipp-renner) and [Simon Scheidegger](https://sites.google.com/site/simonscheidegger), titled _[Machine Learning for Dynamic Incentive Problems](#citation)_ (Renner and Scheidegger; 2018), which introduces a highly scalable computational technique to solve dynamic incentive problems (with potentially a substantial amount of heterogeneity).
 
 However, the scope of the method is much broader: as it is a generic framework to compute global solutions to dynamic (stochastic) models with many state variables, it is applicable to almost any dynamic model. The available solution algorithms are based on "value function iteration", as well as "time iteration".
